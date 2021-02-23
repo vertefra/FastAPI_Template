@@ -1,6 +1,5 @@
-from tortoise import Tortoise, run_async
-
 from config.settings import settings
+from tortoise import Tortoise, run_async
 
 
 async def init() -> None:

@@ -1,6 +1,5 @@
-from pydantic import BaseSettings
-
 import dotenv
+from pydantic import BaseSettings
 
 dotenv.load_dotenv('./config/.env')
 
@@ -39,4 +38,4 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
-# settings.get_env_settings()
+settings.get_env_settings()

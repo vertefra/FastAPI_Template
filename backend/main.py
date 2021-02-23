@@ -1,16 +1,12 @@
+import uvicorn
+from config.settings import settings
 from fastapi import FastAPI
 
-import uvicorn
-
-from config.settings import settings
-
-
-app = FastAPI(
-    title=settings.PROJECT_NAME,
-    debug=settings.DEBUG,
-    description=settings.DESCRIPTION,
-    version=settings.VERSION
-)
+app = FastAPI(title=settings.PROJECT_NAME,
+              debug=settings.DEBUG,
+              description=settings.DESCRIPTION,
+              version=settings.VERSION
+              )
 
 
 if __name__ == '__main__':
