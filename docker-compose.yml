@@ -1,0 +1,22 @@
+version: '3.3'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
+    command: 'python3 main.py'
+    volumes:
+      - ./backend:/app/backend
+  db:
+    build:
+      context: ./db
+      dockerfile: Dockerfile.dev
+    env_file:
+      - ./db/.env
+    ports:
+      - '5432:5432'
