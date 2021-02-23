@@ -29,9 +29,12 @@ DEBUG=1
 RELOAD=1
 ```
 
-## Running the project in local
+## Running the project on local
 
 Create a Python virtual environment with `python3 -m venv venv` in the `backend/` folder.
+
+install all the dependencies with `pip3 install -r requirements`
+
 If necessary, export a new `PYTHONPATH` with `export $PYTHONPATH=$PWD/` inside `backend/` folder
 (to check `PYTHONPATH` -> `echo $PYTHONPATH`)
 
